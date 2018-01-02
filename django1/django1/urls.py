@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include,url
 from django.contrib import admin
+from home import views as home
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^home/', include('home.urls')),
+    url(r'^home/', home.home),
+    url(r'^home-two/', home.homeTwo)
 ]
