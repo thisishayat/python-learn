@@ -10,5 +10,5 @@ class Stock(models.Model):
     close = models.CharField(max_length=10)
     volume = models.CharField(max_length=10)
 
-    def __str__(self):
-        return self.ticker
+    def __long__(self):
+        return self

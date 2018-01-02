@@ -20,8 +20,7 @@ def homeTwo(request):
     renderer_classes = (JSONRenderer,)
     # return HttpResponse('<h1>Welcome man. kire man</h1>')
     posts = Stock.objects.get()
-    postsData = serializers.serialize('json',[posts])
-    print postsData
+    print(posts.id)
     args = {'post':posts}
-    return HttpResponse(postsData,content_type="application/json")
+    return render(request,'home-two.html',args)
 
