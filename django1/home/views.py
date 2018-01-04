@@ -13,9 +13,19 @@ from rest_framework.views import APIView
 # Create your views here.
 
 def home(request):
-    hell = Stock.objects.create(open='Apple', ticker='asasdasd', close='wwwwww',volume='444444')
-    hell.save()
+    #hell = Stock.objects.create(open='Apple', ticker='asasdasd', close='wwwwww',volume='444444')
+    #hell.save()
     # return HttpResponse('<h1>Welcome man. kire man</h1>')
+
+    #a = Stock.objects.get(id=1)
+    #a.open = 'edittttttt'
+    #a.save()
+
+    #a = Stock.objects.get(id=4)
+    #a.delete()
+
+
+
     return render(request,'index.html')
 
 def homeTwo(request):
