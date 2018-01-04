@@ -13,6 +13,8 @@ from rest_framework.views import APIView
 # Create your views here.
 
 def home(request):
+    hell = Stock.objects.create(open='Apple', ticker='asasdasd', close='wwwwww',volume='444444')
+    hell.save()
     # return HttpResponse('<h1>Welcome man. kire man</h1>')
     return render(request,'index.html')
 
@@ -22,5 +24,7 @@ def homeTwo(request):
     posts = Stock.objects.get()
     print(posts.id)
     args = {'post':posts}
+
+
     return render(request,'home-two.html',args)
 
